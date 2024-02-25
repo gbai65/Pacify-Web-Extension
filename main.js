@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
             if (textContent !== null) {
                 const regex = new RegExp('hate speech', 'gi');
                 if (textContent.match(regex)) {
-                    element.innerHTML = element.innerHTML.replace(regex, '<span style="background-color: yellow; color: black">*censord*</span>');
+                    element.innerHTML = element.innerHTML.replace(regex, '<span style="background-color: yellow; color: black">*censored*</span>');
                     if (element.tagName.toLowerCase() === 'a') 
                         element.setAttribute('href', element.getAttribute('href'));
                 }
